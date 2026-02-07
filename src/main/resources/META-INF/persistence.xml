@@ -1,0 +1,14 @@
+<persistence version="3.2" xmlns="https://jakarta.ee/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd">
+    <persistence-unit name="myPU">
+        <class>org.pavl.secretsharingapp.db.ApiKey</class>
+        <class>org.pavl.secretsharingapp.db.AuditLog</class>
+        <class>org.pavl.secretsharingapp.db.Secret</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/secret_sharing"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="postgres"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+        </properties>
+    </persistence-unit>
+</persistence>
